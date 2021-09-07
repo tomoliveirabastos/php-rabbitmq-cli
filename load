@@ -1,0 +1,13 @@
+#!/usr/bin/php
+<?php
+require_once __DIR__ . "/vendor/autoload.php";
+/**
+ * you can pass from cli parameters ['consumer' or 'sender']
+ */
+$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+use Minicli\App;
+$app = new App();
+
+$app->runCommand(($argv));
